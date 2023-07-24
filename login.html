@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <style>
+    body {
+      background-color: #000000; /* Black background */
+      color: #00ff00; /* Green text */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login {
+      background-color: #1f1f1f; /* Darker background for the login box */
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+      width: 300px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: none;
+    }
+
+    button {
+      background-color: #00ff00; /* Green button */
+      color: #000000; /* Black button text */
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body style="background-image: url('N.jpg'); background-size: cover; background-position: center;">
+    <div class="login">
+        <form id="login-form">
+            <h1>work with us</h1>
+            <label for="name">first name</label>
+            <input type="text" id="first name" placeholder="your name"  required>
+            
+            <label for="name">sir Name</label>
+            <input type="text" id="name" placeholder="father name"  required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="example@gmail.com"  required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="make strong password"  required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone"  placeholder="09******"  required>
+
+            <button type="submit"><a href="last (1).html" >Submit</a></button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            // Perform additional validation if needed
+
+            // Submit the form using AJAX or using the form's action and method attributes
+            // Example using AJAX with the Fetch API:
+            fetch("submit-url", {
+                method: "POST",
+                body: new FormData(event.target)
+            })
+            .then(response => {
+                // Handle the response
+            })
+            .catch(error => {
+                // Handle errors
+            });
+        });
+    </script>
+</body>
+</html>
